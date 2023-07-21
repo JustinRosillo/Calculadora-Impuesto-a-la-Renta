@@ -1,0 +1,29 @@
+<h1>{{titulo}}</h1>
+<form>
+  <div class="form-group">
+    <label>Ingrese su sueldo mensual</label>
+    <input
+    type="number"
+    class="form-control"
+    placeholder="Escribe Operando A"
+    [(ngModel)]="operandoA"
+    name="operandoA"
+    />
+  </div>
+  <p>Su sueldo anual es: {{resultadoM}}$</p>
+
+  <p>Deducción del IEES es: %9.45</p>
+
+  <p>El resultado despues de la dedducción es: {{resultadoPor}}$</p>
+
+  <p>Base imponible: {{resultadoBImp}}$</p>
+
+  <p>Su impuesto a la renta es: {{resultadoT}}$</p>
+
+  <p>El impuesto sobre la fracción exdente es: {{resultadoFE}}$</p>
+
+  <p>El impuesto a la renta anual es: {{resultadoIR}}$</p>
+
+  <button type="submit" class="btn btn-primary"
+  (click)="onSumar()">Sumar</button>
+</form>
